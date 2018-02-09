@@ -9,16 +9,12 @@
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim fd As SaveFileDialog = New SaveFileDialog()
-
-
         fd.Title = "Select CSV File "
         fd.InitialDirectory = My.Settings.CSVPath
         fd.Filter = "(*.CSV)|*.CSV"
         fd.FilterIndex = 2
         fd.RestoreDirectory = True
-
         If fd.ShowDialog() = DialogResult.OK Then
-
             CsvFileName.Text = fd.FileName
         End If
     End Sub
@@ -29,10 +25,8 @@
             rownum = edited
         Else
             Form1.Grid1.Rows = Form1.Grid1.Rows + 1
-        rownum = Form1.Grid1.Rows - 1
+            rownum = Form1.Grid1.Rows - 1
         End If
-
-
         Form1.Grid1.set_TextMatrix(rownum, 0, TagName.Text)
         Form1.Grid1.set_TextMatrix(rownum, 1, Tag.Text)
         Form1.Grid1.set_TextMatrix(rownum, 4, SQLDatabase.Text)
