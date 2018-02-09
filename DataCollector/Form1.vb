@@ -31,6 +31,8 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'when form loads
+
         Me.Text = "Elite Data Collector " & Application.ProductVersion
         ConnectedOPCServer = New GBDAAutomation.OPCServer
         Diagnostics.AppendText(Date.Now & vbTab & "Application startup " & vbCrLf)
